@@ -7,6 +7,7 @@ Then("I should see {string}") do |value|
 end
 
 Given("the following dishes exist") do |table|
-    # table is a Cucumber::MultilineArgument::DataTable
-    pending # Write code here that turns the phrase above into concrete actions
+    table.hashes.each do |dish|
+        Dish.create!(dish)
+      end
 end

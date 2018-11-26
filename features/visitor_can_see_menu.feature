@@ -5,12 +5,12 @@ Feature: Visitor can see a menu
 
 Scenario: View list of dishes on the index page
     Given the following dishes exist
-      | name     | description          | price |             
-      | Pizza    | Italian favorite     | 100   |
+      | name     | description          | price | category |   
+      | pizza    | italian favorite     | 100   |   main   |
 
     When I visit the index page
-    Then I should see "Pizza"
-    And I should see "Italian favorite"
+    Then I should see "pizza"
+    And I should see "italian favorite"
     And I should see "100"
 
 # Scenario: Display the menu
