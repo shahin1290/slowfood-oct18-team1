@@ -13,14 +13,4 @@ Scenario: View list of dishes on the index page
     And I should see "italian favorite"
     And I should see "100"
     And I should see "main"
-    
-
-# Scenario: Display the menu
-#     Given I visit the index page
-#     Then I should see "Pizza"
-
-# Category
-# Dish_image (use active storage)
-# Name
-# Description
-# Price
+    And show me the page
