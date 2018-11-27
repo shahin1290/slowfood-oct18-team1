@@ -33,3 +33,8 @@ Feature: User can sign up
         And I fill in 'Password confirmation' field with 'pasword'
         And I click 'Sign up'
         Then I should see "Password confirmation doesn't match Password"
+
+    Scenario: When Email is taken I get error message
+        When I fill in 'Email' field with 'real@email.com'
+        And I click 'Sign up'
+        Then I should see "Email has already been taken"
