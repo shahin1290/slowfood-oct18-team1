@@ -7,8 +7,8 @@ Feature: Visitor can see a menu
         Given the following dishes exist
         | name     | description          | price |    
         | pizza    | italian favorite     | 100   |  
-
-        When I visit the index page
+        When I visit the page
         Then I should see "pizza"
         And I should see "italian favorite"
         And I should see "100"
+        And show me the page
