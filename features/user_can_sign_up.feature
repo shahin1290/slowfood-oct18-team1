@@ -19,3 +19,11 @@ Feature: User can sign up
         And I fill in 'Password confirmation' field with 'password'
         And I click 'Sign up'
         Then I should see 'Hello, Jane Doe'
+    
+    Scenario: When I don't fill in the sign up form I get error messages
+        When I click 'Sign up'
+        Then I should see "Email can't be blank"
+        And I should see "Password can't be blank"
+        And I should see "Name can't be blank"
+        And I should see "Address can't be blank"
+        And I should see "Phone can't be blank"
