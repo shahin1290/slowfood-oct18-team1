@@ -1,5 +1,3 @@
 class Dish < ApplicationRecord
-    validates :name, presence: true
-    validates :description, presence: true
-    validates :price, presence: true
+    validates_presence_of :name, :description, :price
 end
