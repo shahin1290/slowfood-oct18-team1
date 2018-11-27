@@ -11,4 +11,3 @@ Feature: Visitor can see a menu
         Then I should see "pizza"
         And I should see "italian favorite"
         And I should see "100"
-        And show me the page
