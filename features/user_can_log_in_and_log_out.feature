@@ -10,8 +10,15 @@ Feature: User can log in and out
         And I visit the site
         And I click 'Login'
 
-    Scenario: When I fill in the login form correctly I can log in
-        Given I fill in 'Email' field with 'real@email.com'
+    Scenario: If user fills in the login form correctly he can log in
+        When I fill in 'Email' field with 'real@email.com'
         And I fill in 'Password' field with 'password'
         And I click 'Log in'
-        Then I should see 'Hello, Greg' 
+        Then I should see 'Hello, Greg'
+    
+    Scenario: User can log out when logged in
+        Given I am logged in
+        When I click 'Log out'
+        Then I should not see 'Hello, Greg'
+    
+    
