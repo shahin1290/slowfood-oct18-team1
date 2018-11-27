@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get 'dishes/index'
+  resources :dishes, only: [:index]
   root controller: :dishes, action: :index
 end
