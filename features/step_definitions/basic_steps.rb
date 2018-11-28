@@ -4,12 +4,6 @@ Given("the following user exists") do |table|
     end
 end
 
-# Given("the following dishes exist") do |table|
-#     table.hashes.each do |dish|
-#         FactoryBot.create(:dish, dish)
-#     end
-# end
-
 Given("I visit the page") do
     visit root_path
 end

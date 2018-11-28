@@ -11,7 +11,9 @@ Scenario: View list of dishes sorted in categories
       | cake     | homemade             | 30    | dessert  |
 
     When I visit the page
-    Then show me the page
-    Then I should see "olives" in "starter" category
-    And I should see "pizza" in "main" category
-    And I should see "cake" in "dessert" category
+    Then I should see "olives" 
+    And I should see "pizza" 
+    And I should see "cake" 
+    And I should see "starter" 
+    And I should see "main" 
+    And I should see "dessert" 
