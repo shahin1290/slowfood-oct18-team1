@@ -8,8 +8,10 @@ end
 
 Given("the following dishes exist") do |table|
     table.hashes.each do |dish|
-        Dish.create!(dish)
-      end
+        dish_category = Category.create(name: dish[:category])
+        dish.except!('category')
+        Dish.create(dish.merge(category: dish_category))
+    end
 end
 
 Then("show me the page") do
