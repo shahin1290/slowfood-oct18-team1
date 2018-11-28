@@ -1,8 +1,8 @@
 # 'product_class' is the product model name, change it to the class you are using!
-Cartify.product_class = 'Product'
+Cartify.product_class = 'Dish'
 
 # 'user_class' is the order owner model name, change it to the class you are using!
-Cartify.user_class = 'User'
+Cartify.user_class = 'Category'
 
 # 'empty_cart_path' is the route where you will be redirected if empty cart and user try go to checkout. 
 # Default is 'root_path' but can be changed to any path of your choice
