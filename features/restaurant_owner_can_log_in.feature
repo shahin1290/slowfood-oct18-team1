@@ -1,4 +1,4 @@
-Feature: Restaruant owner can log in
+Feature: Restaurant owner can log in
 
     As a restaurant owner,
     In order to be able to keep the information about my restaurant up to date
@@ -6,7 +6,7 @@ Feature: Restaruant owner can log in
 
     Background: 
         Given the following user exists
-        | name | address      | phone   | email          | password | password_confirmation | restaurantowner |
+        | name | address      | phone   | email          | password | password_confirmation | restaurant_owner |
         | Greg | 123 drive st.| 7654321 | real@email.com | password | password              | true            |
         And I visit the page
         And I click 'Log in'
