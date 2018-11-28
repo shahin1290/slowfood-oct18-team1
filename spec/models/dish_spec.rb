@@ -7,7 +7,7 @@ RSpec.describe Dish, type: :model do
     it { is_expected.to have_db_column :price }
   end
 
-  describe 'Dish' do
+  describe 'Associations' do
     it { should belong_to(:category) }
   end
 

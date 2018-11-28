@@ -5,7 +5,7 @@ RSpec.describe Category, type: :model do
     it { is_expected.to have_db_column :name }
   end
 
-  describe 'Category' do
+  describe 'Associations' do
     it { should have_many(:dishes) }
   end
 
