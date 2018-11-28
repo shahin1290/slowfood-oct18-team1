@@ -17,3 +17,4 @@ Feature: Visitor can see dishes sorted in categories
         And I should see "starter" 
         And I should see "main" 
         And I should see "dessert" 
+        And show me the page
