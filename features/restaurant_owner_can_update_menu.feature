@@ -11,5 +11,12 @@ Feature: Restaurant owner can update menu
         And I click 'Log in'
         And I am logged in
 
-    Scenario: Restaurant owner can add new dishes
-        
+    Scenario: If Restaurant owner fills in add dish form correctly
+        When I click 'Add Dish'
+        And I fill in 'Name' field with 'pizza'
+        And I fill in 'Description' field with 'yummy'
+        And I fill in 'Price' field with '99'
+        And I click 'Save Dish'
+        Then I should see 'pizza'
+        And I should see 'yummy'
+        And I should see '99'
