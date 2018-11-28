@@ -8,6 +8,7 @@ RSpec.describe User, type: :model do
     it { is_expected.to have_db_column :address }
     it { is_expected.to have_db_column :phone }
     it { is_expected.to have_db_column :encrypted_password }
+    it { is_expected.to have_db_column :restaurant_owner }
   end
 
   describe 'validations' do
