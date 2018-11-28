@@ -8,8 +8,12 @@ class DishesController < ApplicationController
   end
 
   def create
-    @dish = Dish.create(dishes_params)
-    redirect_to dishes_path
+    @dish = Dish.new(dishes_params)
+    if @dish.save
+      redirect_to dishes_path
+    else
+      render 'new'
+    end
   end
 
   private

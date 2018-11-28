@@ -1,4 +1,13 @@
 = form_with scope: :dish, url: dishes_path, local: true do | form |
+    - if @dish.errors.any?
+        #error_explanation
+            %h2
+                = pluralize(@dish.errors.count, "error")
+                prohibited
+                this dish from being saved:
+            %ul
+                - @dish.errors.full_messages.each do |msg|
+                    %li= msg
     %p
         = form.label :name
         %br/
