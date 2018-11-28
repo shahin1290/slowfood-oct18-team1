@@ -28,6 +28,8 @@ Given("I am logged in") do
         And I fill in 'Password' field with 'password'
         And I click 'Log in'
     }
+end
+
 Given('show me the page') do
     save_and_open_page
 end
