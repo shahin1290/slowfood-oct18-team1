@@ -7,6 +7,7 @@
 - else
     %p= link_to 'Sign up', new_user_registration_path
     %p= link_to 'Log in', new_user_session_path
+%p= link_to 'Add Dish', new_dish_path
 - @dishes.each do |dish|
     %p= dish.name
     %p= dish.description
