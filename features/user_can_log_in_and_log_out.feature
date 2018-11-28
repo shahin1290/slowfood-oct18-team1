@@ -15,6 +15,10 @@ Feature: User can log in and out
         And I fill in 'Password' field with 'password'
         And I click 'Log in'
         Then I should see 'Hello, Greg'
+
+    Scenario: If user fills in the login form incorrectly he will see an error message
+        When I click 'Log in'
+        Then I should see 'Invalid Email or password.'
     
     Scenario: User can log out when logged in
         Given I am logged in
