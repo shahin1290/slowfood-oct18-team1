@@ -24,6 +24,14 @@ When("I fill in {string} field with {string}") do |field, input|
     fill_in field, with: input
 end
 
+Given("I am logged in") do
+    steps %{
+        Given I fill in 'Email' field with 'real@email.com'
+        And I fill in 'Password' field with 'password'
+        And I click 'Log in'
+    }
+end
+
 Given('show me the page') do
     save_and_open_page
 end
