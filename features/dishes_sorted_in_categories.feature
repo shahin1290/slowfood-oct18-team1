@@ -10,7 +10,7 @@ Scenario: View list of dishes sorted in categories
       | pizza    | italian favorite     | 100   | main     |
       | cake     | homemade             | 30    | dessert  |
 
-    When I visit the index page
+    When I visit the page
     Then show me the page
     Then I should see "olives" in "starter" category
     And I should see "pizza" in "main" category
