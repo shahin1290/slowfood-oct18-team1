@@ -20,3 +20,10 @@ Feature: Restaurant owner can update menu
         Then I should see 'Name: pizza'
         And I should see 'Description: yummy'
         And I should see 'Price: 99 SEK'
+
+    Scenario: If Restaurant owner fills in add dish form incorrectly, he gets an error message
+        When I click 'Add Dish'
+        And I click 'Save Dish'
+        Then I should see "Name can't be blank"
+        And I should see "Description can't be blank"
+        And I should see "Price can't be blank"
