@@ -7,8 +7,8 @@ Feature: User can log in and out
         Given the following user exists
         | name | address      | phone   | email          | password | password_confirmation |
         | Greg | 123 drive st.| 7654321 | real@email.com | password | password              |
-        And I visit the site
-        And I click 'Login'
+        And I visit the page
+        And I click 'Log in'
 
     Scenario: If user fills in the login form correctly he can log in
         When I fill in 'Email' field with 'real@email.com'
@@ -20,5 +20,4 @@ Feature: User can log in and out
         Given I am logged in
         When I click 'Log out'
         Then I should not see 'Hello, Greg'
-    
     
