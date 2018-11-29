@@ -14,6 +14,7 @@ class DishesController < ApplicationController
     if @dish.save
       redirect_to dishes_path
     else
+      @categories = Category.all
       render 'new'
     end
   end

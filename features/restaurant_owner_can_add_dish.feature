@@ -4,16 +4,20 @@ Feature: Restaurant owner can add dish
     I would like to be able to make updates to my menu
 
     Background: 
+        Given the following category exists
+        | name | 
+        | Main |
         And I am logged in
 
     Scenario: If Restaurant owner fills in add dish form correctly
         When I click 'Add Dish'
-        And I fill in 'Name' field with 'pizza'
-        And I fill in 'Description' field with 'yummy'
+        And I fill in 'Name' field with 'Pizza'
+        And I fill in 'Description' field with 'Yummy'
         And I fill in 'Price' field with '99'
+        And I choose 'Main' from "Category"
         And I click 'Save Dish'
-        Then I should see 'Name: pizza'
-        And I should see 'Description: yummy'
+        Then I should see 'Name: Pizza'
+        And I should see 'Description: Yummy'
         And I should see 'Price: 99 SEK'
 
     Scenario: If Restaurant owner fills in add dish form incorrectly, he gets an error message
