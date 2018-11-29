@@ -24,7 +24,12 @@ end
 
 Given("I am logged in") do
     steps %{
-        Given I fill in 'Email' field with 'real@email.com'
+        Given the following user exists
+        | name | address      | phone   | email          | password | password_confirmation | restaurant_owner |
+        | Greg | 123 drive st.| 7654321 | really@email.com | password | password              | true            |
+        And I visit the page
+        And I click 'Log in'
+        Given I fill in 'Email' field with 'really@email.com'
         And I fill in 'Password' field with 'password'
         And I click 'Log in'
     }
