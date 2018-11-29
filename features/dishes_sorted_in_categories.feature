@@ -8,13 +8,11 @@ Feature: Visitor can see dishes sorted in categories
         | name     | description          | price | category |   
         | olives   | green little ones    | 20    | starter  |
         | pizza    | italian favorite     | 100   | main     |
+        | pasta    | tom's recipe         | 120   | main     |
         | cake     | homemade             | 30    | dessert  |
 
         When I visit the page
-        Then I should see "olives" 
-        And I should see "pizza" 
-        And I should see "cake" 
-        And I should see "starter" 
-        And I should see "main" 
-        And I should see "dessert" 
-        And show me the page
+        Then I should see "olives" in the "starter" category
+        And I should see "pizza" in the "main" category
+        And I should see "pasta" in the "main" category
+        And I should see "cake" in the "dessert" category

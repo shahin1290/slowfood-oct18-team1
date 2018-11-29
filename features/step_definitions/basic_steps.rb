@@ -39,10 +39,7 @@ When("I click {string} on {string}") do |button, dish|
         click_on button
     end
 end
-  
-
-  
-
+ 
 Given('show me the page') do
     save_and_open_page
 end
