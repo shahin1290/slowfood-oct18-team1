@@ -17,7 +17,7 @@ Feature: Restaurant owner can add dish
         And I fill in 'Name' field with 'Pizza'
         And I fill in 'Description' field with 'Yummy'
         And I fill in 'Price' field with '99'
-        And I choose 'Main' from "Category"
+        And I choose 'Main' from Category
         And I click 'Save Dish'
         Then I should see 'Name: Pizza'
         And I should see 'Description: Yummy'
