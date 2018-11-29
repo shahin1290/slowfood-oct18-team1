@@ -8,7 +8,10 @@ Feature: Restaurant owner can update menu
         Given the following dishes exist
         | name        | description | price | category |
         | Pizza       | Songoku     | 100   | Main     |
-        And I am logged in
+        And the following user exists
+        | name | address      | phone   | email          | password | password_confirmation | restaurant_owner |
+        | Greg | 123 drive st.| 7654321 | really@email.com | password | password              | true            |
+        And I am logged in as 'Greg'
 
     Scenario: If restaruant owner fills in the update form correctly, he can update the menu
         Given the following category exists
@@ -18,7 +21,7 @@ Feature: Restaurant owner can update menu
         And I fill in 'Name' field with 'Pasta'
         And I fill in 'Description' field with 'Carbonara'
         And I fill in 'Price' field with '125'
-        And I choose "Desserts" from "Category"
+        And I choose "Desserts" from Category
         And I click 'Update Dish'
         Then I should see 'Name: Pasta'
         And I should see 'Description: Carbonara'
