@@ -1,2 +1,4 @@
--@contactinfo.each_value do |info|
-    %p= info
+-@contactinfo.each_value do |value|
+    %p= "The name of the place is #{value['Name']}"
+    %p= "It is located at #{value['Address']}"
+    %p= "You can reach us at either #{value['Phone']} or #{value['Email']}"
