@@ -32,6 +32,17 @@ Given("I am logged in") do
     }
 end
 
+When("I click {string} on {string}") do |button, dish|
+    product = Dish.find_by(name: dish)
+    dom_section = "#dish_#{product.id}" 
+    within(dom_section) do 
+        click_on button
+    end
+end
+  
+
+  
+
 Given('show me the page') do
     save_and_open_page
 end

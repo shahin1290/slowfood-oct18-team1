@@ -12,6 +12,12 @@ Feature: Visitor can add dishes to an order
         | cake     | homemade             | 30    | dessert  | 
 
         When I visit the page
-        And I click Add to cart 
-        Then I should see '1' in the cart
+        And I click "Add to cart" on "olives"
+        Then I should see '1 item' 
+        And I click "Add to cart" on "pizza"
+        Then I should see '2 items' 
+        And I click "Add to cart" on "cake"
+        Then I should see '3 items' 
         
+
+

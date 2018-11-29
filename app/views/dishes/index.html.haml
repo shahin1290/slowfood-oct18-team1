@@ -4,14 +4,17 @@
     - else
         %p= "Hello, #{current_user.name}"
     %p= link_to 'Log out', destroy_user_session_path, method: :delete
+    
 - else
     %p= link_to 'Sign up', new_user_registration_path
     %p= link_to 'Log in', new_user_session_path
-- @dishes.each do |dish|
-    %p= dish.category.name
-    %p= dish.name
-    %p= dish.description
-    %p= dish.price
-    %button Add to cart
-   
 
+- @dishes.each do |dish|
+    %div{id: dom_id(dish)}
+        %p= dish.category.name
+        %p= dish.name
+        %p= dish.description
+        %p= dish.price
+        = add_to_cart(dish, 1, "Add to cart")
+
+= shop_icon_quantity   
