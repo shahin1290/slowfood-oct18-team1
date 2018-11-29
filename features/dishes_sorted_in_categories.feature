@@ -12,10 +12,7 @@ Feature: Visitor can see dishes sorted in categories
         | cake     | homemade             | 30    | dessert  |
 
         When I visit the page
-        Then I should see "starter" 
-        And I should see "olives" 
-        Then I should see "main" 
-        And I should see "pizza" 
-        And I should see "pasta"
-        Then I should see "dessert" 
-        And I should see "cake" 
+        Then I should see "olives" in the "starter" category
+        And I should see "pizza" in the "main" category
+        And I should see "pasta" in the "main" category
+        And I should see "cake" in the "dessert" category

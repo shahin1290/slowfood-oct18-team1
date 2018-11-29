@@ -32,6 +32,14 @@ Given("I am logged in") do
     }
 end
 
+Then("I should see {string} in the {string} category") do |dish, category|
+    dish_category = Category.find_by(name: category)
+    dom_section = "#category_#{dish_category.id}"
+    within(dom_section) do
+        expect(page).to have_content dish
+    end
+end
+
 Given('show me the page') do
     save_and_open_page
 end

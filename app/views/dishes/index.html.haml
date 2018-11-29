@@ -9,9 +9,10 @@
     %p= link_to 'Log in', new_user_session_path
 
 - @categories.each do |category|
-    %p= category.name 
-    - category.dishes.each do |dish|
-        %p= dish.name
-        %p= dish.description
-        %p= dish.price
+    %p= category.name
+    %div{id: dom_id(category)}
+        - category.dishes.each do |dish|
+            %p= dish.name
+            %p= dish.description
+            %p= dish.price
 
