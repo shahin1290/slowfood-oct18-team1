@@ -34,6 +34,7 @@ When("I click {string} on {string}") do |button, dish|
     within(dom_section) do 
         click_on button
     end
+end
 When("I click {string}") do |link|
     click_on link
 end
