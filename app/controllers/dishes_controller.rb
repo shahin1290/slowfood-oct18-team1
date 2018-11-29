@@ -22,8 +22,11 @@ class DishesController < ApplicationController
 
   def update
     @dish = Dish.find(params[:id])
-    @dish.update(dishes_params)
-    redirect_to dishes_path
+    if @dish.update(dishes_params)
+      redirect_to dishes_path
+    else 
+      render 'edit'
+    end
   end
 
   def destroy
