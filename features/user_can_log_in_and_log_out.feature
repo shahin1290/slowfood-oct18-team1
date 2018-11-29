@@ -21,7 +21,7 @@ Feature: User can log in and out
         Then I should see 'Invalid Email or password.'
     
     Scenario: User can log out when logged in
-        Given I am logged in
+        Given I am logged in as 'Greg'
         When I click 'Log out'
         Then I should not see 'Hello, Greg'
     
