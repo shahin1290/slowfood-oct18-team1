@@ -7,9 +7,11 @@
 - else
     %p= link_to 'Sign up', new_user_registration_path
     %p= link_to 'Log in', new_user_session_path
-- @dishes.each do |dish|
-    %p= dish.name
-    %p= dish.description
-    %p= dish.price
-    %p= dish.category.name
+
+- @categories.each do |category|
+    %p= category.name 
+    - category.dishes.each do |dish|
+        %p= dish.name
+        %p= dish.description
+        %p= dish.price
 
