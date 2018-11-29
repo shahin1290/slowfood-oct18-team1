@@ -1,0 +1,12 @@
+= form_with(model: @dish, local: true) do | form | 
+    %p
+        = form.label :name
+        = form.text_field :name
+    %p
+        = form.label :description
+        = form.text_field :description
+    %p
+        = form.label :price
+        = form.text_field :price
+    %p
+        = form.submit

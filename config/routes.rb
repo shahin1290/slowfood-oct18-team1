@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users 
-  resources :dishes, only: [:index, :new, :create]
+  resources :dishes
   root controller: :dishes, action: :index
 end
