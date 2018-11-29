@@ -26,6 +26,12 @@ class DishesController < ApplicationController
     redirect_to dishes_path
   end
 
+  def destroy
+    @dish = Dish.find(params[:id])
+    @dish.destroy
+    redirect_to dishes_path
+  end
+
   private
     def dishes_params
         params.require(:dish).permit(:name, :description, :price)

@@ -13,3 +13,4 @@
     %p= "Description: #{dish.description}"
     %p= "Price: #{dish.price} SEK"
     %p= link_to 'Update Dish', edit_dish_path(dish)
+    %p= link_to 'Delete Dish', dish_path(dish), method: :delete
