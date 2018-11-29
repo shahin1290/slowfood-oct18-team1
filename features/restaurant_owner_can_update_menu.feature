@@ -18,7 +18,6 @@ Feature: Restaurant owner can update menu
         And I fill in 'Name' field with 'Pasta'
         And I fill in 'Description' field with 'Carbonara'
         And I fill in 'Price' field with '125'
-        And show me the page
         And I choose "Desserts" from "Category"
         And I click 'Update Dish'
         Then I should see 'Name: Pasta'

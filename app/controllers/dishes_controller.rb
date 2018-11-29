@@ -10,7 +10,7 @@ class DishesController < ApplicationController
 
   def create
     @dish = Dish.new(dishes_params)
-    @dish.update(category: Category.find_by(id: params[:dish][:category_id]))
+    @dish.update(category: find_category)
     if @dish.save
       redirect_to dishes_path
     else
@@ -27,7 +27,7 @@ class DishesController < ApplicationController
   def update
     @dish = Dish.find(params[:id])
     if @dish.update(dishes_params)
-      @dish.update(category: Category.find_by(id: params[:dish][:category_id]))
+      @dish.update(category: find_category)
       redirect_to dishes_path
     else 
       @categories = Category.all
@@ -44,5 +44,9 @@ class DishesController < ApplicationController
   private
     def dishes_params
         params.require(:dish).permit(:name, :description, :price)
+    end
+
+    def find_category
+      Category.find_by(id: params[:dish][:category_id])
     end
 end
