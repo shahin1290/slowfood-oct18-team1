@@ -18,4 +18,8 @@
         = form.label :price
         = form.text_field :price
     %p
+        = form.label :category
+        %br/
+        = form.collection_select :category_id, @categories, :id, :name
+    %p
         = form.submit

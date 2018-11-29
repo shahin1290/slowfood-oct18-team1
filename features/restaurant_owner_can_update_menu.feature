@@ -6,19 +6,25 @@ Feature: Restaurant owner can update menu
 
     Background: 
         Given the following dishes exist
-        | name  | description | price |
-        | Pizza | Songoku     | 100   |
+        | name        | description | price | category |
+        | Pizza       | Songoku     | 100   | Main     |
         And I am logged in
 
     Scenario: If restaruant owner fills in the update form correctly, he can update the menu
+        Given the following category exists
+        | name     |
+        | Desserts |
         When I click 'Update Dish'
         And I fill in 'Name' field with 'Pasta'
         And I fill in 'Description' field with 'Carbonara'
         And I fill in 'Price' field with '125'
+        And show me the page
+        And I choose "Desserts" from "Category"
         And I click 'Update Dish'
         Then I should see 'Name: Pasta'
         And I should see 'Description: Carbonara'
         And I should see 'Price: 125 SEK'
+        And I should see "Desserts"
 
     Scenario: If restaurant owner fills in the update form incorrectly, he gets an error message
         When I click 'Update Dish'

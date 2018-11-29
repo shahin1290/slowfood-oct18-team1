@@ -21,13 +21,16 @@ class DishesController < ApplicationController
 
   def edit
     @dish = Dish.find(params[:id])
+    @categories = Category.all
   end
 
   def update
     @dish = Dish.find(params[:id])
     if @dish.update(dishes_params)
+      @dish.update(category: Category.find_by(id: params[:dish][:category_id]))
       redirect_to dishes_path
     else 
+      @categories = Category.all
       render 'edit'
     end
   end
