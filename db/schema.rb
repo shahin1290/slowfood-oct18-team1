@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2018_11_28_192230) do
     t.integer "zip"
     t.string "country"
     t.string "phone"
-    t.integer "category_id"
+    t.integer "user_id"
     t.bigint "order_id"
     t.index ["order_id"], name: "index_cartify_addresses_on_order_id"
   end
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 2018_11_28_192230) do
   create_table "cartify_orders", force: :cascade do |t|
     t.decimal "subtotal", precision: 8, scale: 2
     t.decimal "total", precision: 8, scale: 2
-    t.integer "category_id"
+    t.integer "user_id"
     t.bigint "order_status_id"
     t.bigint "coupon_id"
     t.bigint "delivery_id"
