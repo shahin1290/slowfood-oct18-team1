@@ -1,0 +1,25 @@
+= form_with(model: @dish, local: true) do | form | 
+    - if @dish.errors.any?
+        #error_explanation
+            %h2
+                = pluralize(@dish.errors.count, "error")
+                prohibited
+                this dish from being saved:
+            %ul
+                - @dish.errors.full_messages.each do |msg|
+                    %li= msg
+    %p
+        = form.label :name
+        = form.text_field :name
+    %p
+        = form.label :description
+        = form.text_field :description
+    %p
+        = form.label :price
+        = form.text_field :price
+    %p
+        = form.label :category
+        %br/
+        = form.collection_select :category_id, @categories, :id, :name
+    %p
+        = form.submit
