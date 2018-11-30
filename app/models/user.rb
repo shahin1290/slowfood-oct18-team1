@@ -11,4 +11,5 @@ class User < ApplicationRecord
   has_one :shipping, class_name: 'Cartify::Shipping', foreign_key: :user_id
   has_many :addresses, class_name: 'Cartify::Address', foreign_key: :user_id
 
+  
 end

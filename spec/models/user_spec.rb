@@ -17,9 +17,17 @@ RSpec.describe User, type: :model do
     it { is_expected.to validate_presence_of :address }
   end
 
+  describe 'Associations' do
+    it { should have_one(:billing) }
+    it { should have_one(:shipping) }
+    it { should have_many(:orders) }
+    it { should have_many(:addresses) }
+  end
+
   describe FactoryBot do 
     it 'should be valid' do
       expect(FactoryBot.create(:user)).to be_valid
     end
   end
 end
+
