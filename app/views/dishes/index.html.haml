@@ -1,23 +1,26 @@
-.bg-yellow-light.h-16    
-    - if user_signed_in?
-        .flex.flex-row-reverse
-            - if current_user.restaurant_owner?
-                %div.flex.flex-col.text-right
-                    %p= "Hello, #{current_user.name}, you are the boss!"
-                    .flex.flex-row-reverse
-                        %p.pr-4= link_to 'Add Dish', new_dish_path
-                        %p.pr-8= link_to 'Log out', destroy_user_session_path, method: :delete
-            - else
-                .flex-col.items-start
-                    %p= "Hello, #{current_user.name}"
-                    %p.pr-4= link_to 'Log out', destroy_user_session_path, method: :delete
-    - else
-        .flex.flex-row-reverse
-            %p.pr-4= link_to 'Sign up', new_user_registration_path
-            %p.pr-4= link_to 'Log in', new_user_session_path
-    .flex.flex-row-reverse.pt-4
-        = notice || alert
-    =image_tag 'moes_logo_smaller.png'
+.bg-yellow-light.h-24    
+    .flex.justify-between
+        =image_tag 'moes_logo_smaller.png',{class:'h-24'}
+        - if user_signed_in?
+            .flex
+                - if current_user.restaurant_owner?
+                    %div.flex.flex-col.text-right
+                        %p= "Hello, #{current_user.name}, you are the boss!"
+                        .flex.flex-row-reverse
+                            %p.pr-4= link_to 'Add Dish', new_dish_path
+                            %p.pr-8.pb-4= link_to 'Log out', destroy_user_session_path, method: :delete
+                        = notice || alert
+                - else
+                    .flex-col.items-start
+                        %p= "Hello, #{current_user.name}"
+                        %p.pr-4= link_to 'Log out', destroy_user_session_path, method: :delete
+                        = notice || alert
+        - else
+            .flex
+                %p.pr-4= link_to 'Sign up', new_user_registration_path
+                %p.pr-4= link_to 'Log in', new_user_session_path
+
+
 - @categories.each do |category|
     %p.m-5= category.name
     %div.flex{id: dom_id(category)}
