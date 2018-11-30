@@ -1,0 +1,9 @@
+
+@tailwind preflight;
+
+@tailwind components;
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@tailwind utilities;
+body{
+    font-family: 'Gloria Hallelujah', cursive;
+}
