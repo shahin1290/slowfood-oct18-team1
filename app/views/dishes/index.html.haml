@@ -8,7 +8,7 @@
 - else
     %p= link_to 'Sign up', new_user_registration_path
     %p= link_to 'Log in', new_user_session_path
-
+    =image_tag 'moes_logo_smaller.png'
 - @categories.each do |category|
     %p= category.name
     %div.flex{id: dom_id(category)}
