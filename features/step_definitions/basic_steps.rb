@@ -28,6 +28,13 @@ Given("I visit the page") do
     visit root_path
 end
 
+When("I click {string} on {string}") do |button, dish|
+    product = Dish.find_by(name: dish)
+    dom_section = "#dish_#{product.id}" 
+    within(dom_section) do 
+        click_on button
+    end
+end
 When("I click {string}") do |link|
     click_on link
 end
@@ -39,7 +46,7 @@ end
 When("I fill in {string} field with {string}") do |field, input|
     fill_in field, with: input
 end
-
+ 
 Given('show me the page') do
     save_and_open_page
 end
