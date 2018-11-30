@@ -1,0 +1,19 @@
+= form_with scope: :@contactinfo, url: restaurant_path, local: true do | form |
+    %p
+        = form.label :name
+        %br/
+        = form.text_field :name
+    %p
+        = form.label :address
+        %br/
+        = form.text_field :address
+    %p
+        = form.label :phone
+        %br/
+        = form.text_field :phone
+    %p
+        = form.label :email
+        %br/
+        = form.text_field :name
+    %p
+        = form.submit

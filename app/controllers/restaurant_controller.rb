@@ -8,6 +8,12 @@ class RestaurantController < ApplicationController
 
     def edit
         file = Rails.root.join('app','assets','data','contactinfo.yml')
-        change = YAML::load_file(file)
+        @contactinfo = YAML::load_file(file)
+    end
+
+    def update
+        file = Rails.root.join('app','assets','data','contactinfo.yml')
+        @contactupdate = params.require(@contactinfo).permit(:name, :address, :email, :phone)
+        
     end
 end
