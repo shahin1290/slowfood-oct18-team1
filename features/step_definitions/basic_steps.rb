@@ -47,14 +47,11 @@ When("I fill in {string} field with {string}") do |field, input|
     fill_in field, with: input
 end
 
-When("I fill in Enter Email for quick register with {string}") do |input|
-    email_field = page.find_by_id('user_email')
-    within(email_field) do
-    fill_in 'Enter Email', with: input
-    end
+Given("the user logs in as {string}") do |email|
+    user = User.find_by(email: email)
+    login_as(user, scope: :user)
 end
 
-  
 Given('show me the page') do
     save_and_open_page
 end

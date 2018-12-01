@@ -14,3 +14,7 @@ Then("I should see {string} in the {string} category") do |dish, category|
     end
 end
 
+Then("I click billing checkbox") do
+    find('.checkbox-icon').click
+end
+
