@@ -3,19 +3,39 @@
 
 @tailwind components;
 @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
 @tailwind utilities;
 body{
     font-family: 'Gloria Hallelujah', cursive;
 }
 
+
 .field{
     padding: 1rem;
+
+}
+
+.field input{
+    padding-top: 12px;
+    height: 1.2rem;
+    border-radius: 10px
 }
 
 .actions{
     padding: 1rem;
 }
 
-img{
+.logolink{ 
+    height: 3rem;
+}
+
+.logo{
     height: 6rem;
+}
+
+
+
+.main{
+    width: 100%;
+    height: auto;
 }
