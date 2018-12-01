@@ -1,12 +1,21 @@
-- if user_signed_in?
-    - if current_user.restaurant_owner?
-        %p= "Hello, #{current_user.name}, you are the boss!"
-        %p= link_to 'Add Dish', new_dish_path
-    - else
-        %p= "Hello, #{current_user.name}"
-    %p= link_to 'Log out', destroy_user_session_path, method: :delete
-    
-- else
-    %p= link_to 'Sign up', new_user_registration_path
-    %p= link_to 'Log in', new_user_session_path
-    
+.bg-yellow-light.h-24    
+    .flex.justify-between
+        =image_tag 'moes_logo_smaller.png',{class:'h-24'}
+        - if user_signed_in?
+            .flex
+                - if current_user.restaurant_owner?
+                    %div.flex.flex-col.text-right
+                        %p= "Hello, #{current_user.name}, you are the boss!"
+                        .flex.flex-row-reverse
+                            %p.pr-4= link_to 'Add Dish', new_dish_path
+                            %p.pr-8.pb-4= link_to 'Log out', destroy_user_session_path, method: :delete
+                        = notice || alert
+                - else
+                    .flex-col.items-start
+                        %p= "Hello, #{current_user.name}"
+                        %p.pr-4= link_to 'Log out', destroy_user_session_path, method: :delete
+                        = notice || alert
+        - else
+            .flex
+                %p.pr-4= link_to 'Sign up', new_user_registration_path
+                %p.pr-4= link_to 'Log in', new_user_session_path

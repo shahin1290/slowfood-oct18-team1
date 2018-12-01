@@ -1,9 +1,4 @@
 GIT
-  remote: https://github.com/IcaliaLabs/tailwindcss-rails.git
-  revision: 202c140dc8626500df995f688ed8001490028502
-  specs:
-    tailwindcss (0.2.0)
-      railties (>= 4.1.0, < 6.0)
   remote: https://github.com/CraftAcademy/cartify.git
   revision: 5382f3fcf87b332a3e91a9c871b1edff57125025
   branch: rails_5_2
@@ -21,6 +16,13 @@ GIT
       turbolinks (~> 5)
       virtus (~> 1.0, >= 1.0.5)
       wicked (~> 1.3, >= 1.3.2)
+
+GIT
+  remote: https://github.com/IcaliaLabs/tailwindcss-rails.git
+  revision: 202c140dc8626500df995f688ed8001490028502
+  specs:
+    tailwindcss (0.2.0)
+      railties (>= 4.1.0, < 6.0)
 
 GEM
   remote: https://rubygems.org/

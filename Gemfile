@@ -14,7 +14,6 @@ gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'webpacker', '~> 3.5'
 gem 'tailwindcss', git: 'https://github.com/IcaliaLabs/tailwindcss-rails.git'
-
 gem 'cartify', github: 'CraftAcademy/cartify', branch: 'rails_5_2'
 
 group :development, :test do
