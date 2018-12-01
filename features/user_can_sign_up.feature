@@ -8,7 +8,7 @@ Feature: User can sign up
         | name | address      | phone   | email          | password | password_confirmation |
         | Greg | 123 drive st.| 7654321 | real@email.com | password | password              |
         And I visit the page
-        And I click 'Sign up'
+        And I click 'Registration'
 
     Scenario: When I fill in the sign up form correctly, I can sign up
         When I fill in 'Name' field with 'Jane Doe'

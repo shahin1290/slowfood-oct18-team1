@@ -17,15 +17,14 @@
         %p.text-center.text-grey-darker.text-base.pb-4  We now love tourists!
 
 - @categories.each do |category|
-    %h1.text-center.border-solid.border-black.border-2.bg-yellow-lighter.h-10p.flex.justify-center.items-center{id: dom_id(category)}= category.name
-    %div.flex.justify-center.flex-wrap
+    %h1.text-center.border-solid.border-black.border-2.bg-yellow-lighter.h-10p.flex.justify-center.items-center= category.name
+    %div.flex.justify-center.flex-wrap{id: dom_id(category)}
         - category.dishes.each do |dish|
-            .dishcards.flex-col.m-5.border-solid.border-black.border-2.bg-yellow-lighter.p-4.rounded-lg.text-center.w-30p
+            .dishcards.flex-col.m-5.border-solid.border-black.border-2.bg-yellow-lighter.p-4.rounded-lg.text-center.w-30p{id: dom_id(dish)}
                 %h2.p-2.border-b.border-black= dish.name
                 %p.p-2.font-hairline.tracking-wide= dish.description
                 %h3.p-2= "#{dish.price} SEK"
-                .text-center.p-2
-                    = add_to_cart(dish, 1, "Add to cart")
+                = add_to_cart(dish, 1, "Add to cart")
                 - if user_signed_in? 
                     - if current_user.restaurant_owner?
                         .text-center

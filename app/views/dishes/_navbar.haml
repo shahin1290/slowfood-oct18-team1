@@ -11,7 +11,7 @@
     - if user_signed_in?
         .flex.w-33p
             - if current_user.restaurant_owner?
-                %div.flex.flex-col.text-right
+                %div.flex.flex-col.text-right.w-full
                     %p= "Hello, #{current_user.name}, you are the boss!"
                     .flex.flex-row-reverse
                         %p.pr-4= link_to 'Add Dish', new_dish_path
@@ -27,8 +27,8 @@
     - else
         .w-33p
             .flex.flex-row-reverse.p-2
-                %p.pl-4= link_to 'Sign up', new_user_registration_path
-                %p= link_to 'Log in', new_user_session_path
+                %p.pl-4= link_to 'Registration', new_user_registration_path
+                %p= link_to 'Login', new_user_session_path
             %h5.text-right.p-2= shop_icon_quantity 
             %h5.text-right.p-2= link_to "Proceed to checkout", cartify.cart_path
             

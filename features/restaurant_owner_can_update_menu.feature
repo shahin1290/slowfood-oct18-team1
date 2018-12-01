@@ -23,9 +23,9 @@ Feature: Restaurant owner can update menu
         And I fill in 'Price' field with '125'
         And I choose "Desserts" from Category
         And I click 'Update Dish'
-        Then I should see 'Name: Pasta'
-        And I should see 'Description: Carbonara'
-        And I should see 'Price: 125 SEK'
+        Then I should see 'Pasta'
+        And I should see 'Carbonara'
+        And I should see '125 SEK'
         And I should see "Desserts"
 
     Scenario: If restaurant owner fills in the update form incorrectly, he gets an error message

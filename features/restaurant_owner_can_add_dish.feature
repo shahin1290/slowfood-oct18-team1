@@ -19,9 +19,9 @@ Feature: Restaurant owner can add dish
         And I fill in 'Price' field with '99'
         And I choose 'Main' from Category
         And I click 'Save Dish'
-        Then I should see 'Name: Pizza'
-        And I should see 'Description: Yummy'
-        And I should see 'Price: 99 SEK'
+        Then I should see 'Pizza'
+        And I should see 'Yummy'
+        And I should see '99 SEK'
 
     Scenario: If Restaurant owner fills in add dish form incorrectly, he gets an error message
         When I click 'Add Dish'

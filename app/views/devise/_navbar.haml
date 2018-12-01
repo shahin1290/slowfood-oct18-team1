@@ -1,6 +1,6 @@
 .bg-yellow-light.h-25p.flex
     .w-33p
-        =link_to image_tag('moes_logo_smaller.png'), root_path 
+        =link_to image_tag('moes_logo_smaller.png',{class: 'logo' }), root_path 
     .w-33p
         %h1.text-4xl.text-center Moe's Tavern
         %h4.text-center Springfield, U.S.A.
@@ -23,8 +23,8 @@
     - else
         .w-33p
             .flex.flex-row-reverse.p-2
-                %p.pl-4= link_to 'Sign up', new_user_registration_path
-                %p= link_to 'Log in', new_user_session_path
+                %p.pl-4= link_to 'Registration', new_user_registration_path
+                %p= link_to 'Login', new_user_session_path
             %h5.text-right.p-2= shop_icon_quantity 
             %h5.text-right.p-2= link_to "Proceed to checkout", cartify.cart_path
             
