@@ -20,6 +20,7 @@
                 %p.pr-4= link_to 'Sign up', new_user_registration_path
                 %p.pr-4= link_to 'Log in', new_user_session_path
 
+= render 'login_logout'
 
 - @categories.each do |category|
     %p.m-5= category.name
@@ -33,4 +34,15 @@
                     - if current_user.restaurant_owner?
                         %p.ml-2= link_to 'Update Dish', edit_dish_path(dish)
                         %p.ml-2= link_to 'Delete Dish', dish_path(dish), method: :delete
+            %div{id: dom_id(dish)} 
+                %p= "Name: #{dish.name}"
+                %p= "Description: #{dish.description}"
+                %p= "Price: #{dish.price} SEK"
+                = add_to_cart(dish, 1, "Add to cart")
+                - if user_signed_in?
+                    - if current_user.restaurant_owner?
+                        %p= link_to 'Update Dish', edit_dish_path(dish)
+                        %p= link_to 'Delete Dish', dish_path(dish), method: :delete
+= shop_icon_quantity 
 
+= link_to "Proceed to checkout", cartify.cart_path

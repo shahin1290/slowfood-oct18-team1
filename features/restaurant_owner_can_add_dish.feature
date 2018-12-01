@@ -4,17 +4,20 @@ Feature: Restaurant owner can add dish
     I would like to be able to make updates to my menu
 
     Background: 
-        Given the following category exists
+        Given the following user exists
+        | name | address      | phone   | email            | password | password_confirmation | restaurant_owner |
+        | Greg | 123 drive st.| 7654321 | really@email.com | password | password              | true             |
+        And the following category exists
         | name | 
         | Main |
-        And I am logged in
+        And I am logged in as 'Greg'
 
     Scenario: If Restaurant owner fills in add dish form correctly
         When I click 'Add Dish'
         And I fill in 'Name' field with 'Pizza'
         And I fill in 'Description' field with 'Yummy'
         And I fill in 'Price' field with '99'
-        And I choose 'Main' from "Category"
+        And I choose 'Main' from Category
         And I click 'Save Dish'
         Then I should see 'Name: Pizza'
         And I should see 'Description: Yummy'

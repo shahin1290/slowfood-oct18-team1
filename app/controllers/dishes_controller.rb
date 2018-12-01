@@ -2,6 +2,9 @@ class DishesController < ApplicationController
   def index
     @categories = Category.all
   end
+  def show
+    
+  end
 
   def new
     @dish = Dish.new
