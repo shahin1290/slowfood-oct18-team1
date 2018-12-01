@@ -1,6 +1,9 @@
 .bg-yellow-light.h-24    
     .flex.justify-between
         =image_tag 'moes_logo_smaller.png',{class:'h-24'}
+        %div
+            %h1.text-5xl Moe's Tavern
+            %h3.text-center Springfield, U.S.A.
         - if user_signed_in?
             .flex
                 - if current_user.restaurant_owner?
@@ -14,8 +17,14 @@
                     .flex-col.items-start
                         %p= "Hello, #{current_user.name}"
                         %p.pr-4= link_to 'Log out', destroy_user_session_path, method: :delete
+                        = shop_icon_quantity 
+                        = link_to "Proceed to checkout", cartify.cart_path
                         = notice || alert
         - else
-            .flex
-                %p.pr-4= link_to 'Sign up', new_user_registration_path
-                %p.pr-4= link_to 'Log in', new_user_session_path
+            %div
+                .flex
+                    %p.pr-2= link_to 'Sign up', new_user_registration_path
+                    %p.pr-2= link_to 'Log in', new_user_session_path
+                %h5.text-right.p-2= shop_icon_quantity 
+                %h5.text-end.p-2= link_to "Proceed to checkout", cartify.cart_path
+                
