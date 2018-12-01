@@ -1,8 +1,8 @@
-= render 'login_logout'
+= render 'navbar'
 
 - @categories.each do |category|
-    %p.m-5= category.name
-    %div.flex{id: dom_id(category)}
+    %p.text-center.border-solid.border-black.border-2.bg-yellow-lighter.h-6.flex.justify-center.items-center= category.name
+    %div.flex.justify-center{id: dom_id(category)}
         - category.dishes.each do |dish|
             .flex-col.m-5.border-solid.border-black.border-2.bg-yellow-lighter.p-4.rounded-full
                 %p.ml-2= "Name: #{dish.name}"

@@ -1,0 +1,30 @@
+.bg-yellow-light.h-24    
+    .flex.justify-between
+        =link_to image_tag('moes_logo_smaller.png'), root_path 
+        %div
+            %h1.text-5xl Moe's Tavern
+            %h3.text-center Springfield, U.S.A.
+        - if user_signed_in?
+            .flex
+                - if current_user.restaurant_owner?
+                    %div.flex.flex-col.text-right
+                        %p= "Hello, #{current_user.name}, you are the boss!"
+                        .flex.flex-row-reverse
+                            %p.pr-4= link_to 'Add Dish', new_dish_path
+                            %p.pr-8.pb-4= link_to 'Log out', destroy_user_session_path, method: :delete
+                        = notice || alert
+                - else
+                    .flex-col.items-start
+                        %p= "Hello, #{current_user.name}"
+                        %p.pr-4= link_to 'Log out', destroy_user_session_path, method: :delete
+                        = shop_icon_quantity 
+                        = link_to "Proceed to checkout", cartify.cart_path
+                        = notice || alert
+        - else
+            %div
+                .flex.justify-between.p-2
+                    %p= link_to 'Sign up', new_user_registration_path
+                    %p= link_to 'Log in', new_user_session_path
+                %h5.text-right.p-2= shop_icon_quantity 
+                %h5.text-end.p-2= link_to "Proceed to checkout", cartify.cart_path
+                
