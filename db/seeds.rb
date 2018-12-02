@@ -8,7 +8,7 @@ Category.create!(name:'Mains', id:2)
 Category.create!(name:'Desserts', id:3)
 
 9.times do
-    Dish.create!(name:Faker::Food.dish, description:Faker::Food.description, price:Faker::Food.measurement, category_id: 1 )
-    Dish.create!(name:Faker::Food.dish, description:Faker::Food.description, price:Faker::Food.measurement, category_id: 2 )
-    Dish.create!(name:Faker::Food.dish, description:Faker::Food.description, price:Faker::Food.measurement, category_id: 3 )
+    Dish.create!(name:Faker::Food.vegetables, description:Faker::Food.spice, price: rand(39...399), category_id: 1 )
+    Dish.create!(name:Faker::Food.dish, description:Faker::Food.description, price:rand(39...399), category_id: 2 )
+    Dish.create!(name:Faker::Dessert.variety, description:Faker::Dessert.flavor, price:rand(39...399), category_id: 3 )
 end
