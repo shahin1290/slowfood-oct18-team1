@@ -52,6 +52,10 @@ Given("the user logs in as {string}") do |email|
     login_as(user, scope: :user)
 end
 
+Then("I select {string} from {string}") do |option, selection|
+    select option, from: selection
+end
+
 Given('show me the page') do
     save_and_open_page
 end
@@ -60,6 +64,14 @@ Then('stop') do
     binding.pry
 end
 
-And("I wait {int} second(s)") do |int|
+Then("I wait {int} second") do |int|
     sleep int
 end
+
+# And("I wait {int} second(s)") do |int|
+#     sleep int
+# end
+
+# When /^I wait (\d+) seconds?$/ do |seconds|
+#     sleep seconds.to_i
+# end
