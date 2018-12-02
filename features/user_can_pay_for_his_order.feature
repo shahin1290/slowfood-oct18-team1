@@ -22,6 +22,7 @@ Feature: User can pay for his order
         And I click "Add to cart" on "pizza"
         And I click "Add to cart" on "pizza"
         And I click "Add to cart" on "cake"
+        And I wait "2" second(s)
         And I click "Checkout"
         Then I should see "Order Total: €250"
         When I click "Checkout"
@@ -30,10 +31,11 @@ Feature: User can pay for his order
         And I fill in 'First Name' field with 'Shahin'
         And I fill in 'Last name' field with 'Patowary'
         And I fill in 'Address' field with 'skattegarden'
-        And I fill in 'city' field with 'linkoping'
+        And I fill in 'City' field with 'linkoping'
         And I fill in 'Zip' field with '58648'
-        And I fill in 'Country' field with 'sweden'
+        And I select "Sweden" from 'Country'
         And I fill in 'Phone' field with '0761256612'
         And I click "Use Billing Adress"
         And I click "Save and Continue"
+                Then stop
         Then I should see "Shipping Method"

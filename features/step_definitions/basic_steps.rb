@@ -55,3 +55,11 @@ end
 Given('show me the page') do
     save_and_open_page
 end
+
+Then('stop') do
+    binding.pry
+end
+
+And("I wait {int} second(s)") do |int|
+    sleep int
+end
