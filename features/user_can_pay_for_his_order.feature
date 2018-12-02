@@ -22,11 +22,11 @@ Feature: User can pay for his order
         And I click "Add to cart" on "pizza"
         And I click "Add to cart" on "pizza"
         And I click "Add to cart" on "cake"
+            Then I wait 1 second
         And I click "Checkout"
         Then I should see "Order Total: €250"
         When I click "Checkout"
         Then I should see "Shipping Address"
-            # Then stop
             # Then I wait 1 second
         When I click billing checkbox 
         And I fill in 'First Name' field with 'Shahin'
@@ -39,5 +39,5 @@ Feature: User can pay for his order
         # And I click "Use Billing Adress"
         And I click "Save and Continue"
         Then I should see "Shipping Method"
-            Then stop
+            # Then stop
 
