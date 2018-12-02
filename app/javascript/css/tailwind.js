@@ -427,11 +427,11 @@ module.exports = {
   | Border radius                    https://tailwindcss.com/docs/border-radius
   |-----------------------------------------------------------------------------
   |
-  | Here is where you define your border radius values. If a `default` radius
-  | is provided, it will be made available as the non-suffixed `.rounded`
+  | Here is where you define your border radius values. If a 'default' radius
+  | is provided, it will be made available as the non-suffixed '.rounded'
   | utility.
   |
-  | If your scale includes a `0` value to reset already rounded corners, it's
+  | If your scale includes a '0' value to reset already rounded corners, it's
   | a good idea to put it first so other values are able to override it.
   |
   | Class name: .rounded{-side?}{-size?}
@@ -745,8 +745,8 @@ module.exports = {
   | the defaults we provide, it's possible to apply multiple shadows
   | per utility using comma separation.
   |
-  | If a `default` shadow is provided, it will be made available as the non-
-  | suffixed `.shadow` utility.
+  | If a 'default' shadow is provided, it will be made available as the non-
+  | suffixed '.shadow' utility.
   |
   | Class name: .shadow-{size?}
   |
@@ -814,7 +814,7 @@ module.exports = {
   |-----------------------------------------------------------------------------
   |
   | Here is where you define your SVG fill colors. By default we just provide
-  | `fill-current` which sets the fill to the current text color. This lets you
+  | 'fill-current' which sets the fill to the current text color. This lets you
   | specify a fill color using existing text color utilities and helps keep the
   | generated CSS file size down.
   |
@@ -833,7 +833,7 @@ module.exports = {
   |-----------------------------------------------------------------------------
   |
   | Here is where you define your SVG stroke colors. By default we just provide
-  | `stroke-current` which sets the stroke to the current text color. This lets
+  | 'stroke-current' which sets the stroke to the current text color. This lets
   | you specify a stroke color using existing text color utilities and helps
   | keep the generated CSS file size down.
   |
@@ -862,7 +862,7 @@ module.exports = {
   |   - active
   |   - group-hover
   |
-  | To disable a module completely, use `false` instead of an array.
+  | To disable a module completely, use 'false' instead of an array.
   |
   */
 
@@ -926,7 +926,7 @@ module.exports = {
   |-----------------------------------------------------------------------------
   |
   | Here is where you can register any plugins you'd like to use in your
-  | project. Tailwind's built-in `container` plugin is enabled by default to
+  | project. Tailwind's built-in 'container' plugin is enabled by default to
   | give you a Bootstrap-style responsive container component out of the box.
   |
   | Be sure to view the complete plugin documentation to learn more about how
