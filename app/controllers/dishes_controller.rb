@@ -3,7 +3,7 @@ class DishesController < ApplicationController
     @categories = Category.all
   end
   def show
-    
+    @dish = Dish.find(params[:id])
   end
 
   def new

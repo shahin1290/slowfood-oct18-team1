@@ -1,0 +1,47 @@
+
+@tailwind preflight;
+
+@tailwind components;
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch');
+@tailwind utilities;
+body{
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+
+.field{
+    padding: 1rem;
+
+}
+
+.field input{
+    height: 1.5rem;
+    border-radius: 10px;
+    width: 75%;
+    text-align: center;
+}
+
+.actions{
+    text-align: center;
+    padding: 1rem;
+}
+
+.logolink{ 
+    height: 3rem;
+}
+
+.logo{
+    height: 6rem;
+}
+
+.main{
+    width: 100%;
+    height: auto;
+}
+
+.image1{
+    height: 150px;
+    width: auto;
+}
+

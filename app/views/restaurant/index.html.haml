@@ -1,0 +1,36 @@
+.flex.justify-center.pr-32.pl-32.pt-16
+  .h-48.lg.h-auto.lg.w-48.flex-none.bg-cover.rounded-t.lg.rounded-t-none.lg.rounded-l.text-center.overflow-hidden{style: "background-image: url('https://assets.fxnetworks.com/cms/prod/shows/the-simpsons/photos/simpsons-character/Moe/swsb_character_fact_moe_550x960.png')", title: "Moe's Bar"}
+  .border-2.border-black.lg.lg.lg.border-black.bg-yellow-light.rounded-b.lg.rounded-b-none.lg.rounded-r.p-4.flex.flex-col.justify-between.leading-normal
+    .mb-8
+      .text-black.font-bold.text-xl.mb-2 
+      %p.text-grey-darker.text-base 
+    .flex.items-center
+      %img.w-10.h-10.rounded-full.mr-4{alt: "Moe", src: "https://shareville-media.s3.amazonaws.com/cache/4f/6b/4f6bd8dc267b845be71b22830989f7aa.jpg"}/
+      .text-sm
+        %p.text-black.leading-none Moe Szyslak
+        %p.text-grey-dark Bartender
+    %p.text-3xl= "This is #{@contactinfo['name']}"
+    %p= @contactinfo['description']
+    %p="If you're willing to over look the mild smell of fish and cheese: #{@contactinfo['address']}"
+    %p="And you can reach us at #{@contactinfo['email']} and #{@contactinfo['phone']}."
+
+.flex.justify-center.pr-32.pl-32.pt-16
+  .h-48.lg.h-auto.lg.w-48.flex-none.bg-cover.rounded-t.lg.rounded-t-none.lg.rounded-l.text-center.overflow-hidden{style: "background-image: url('https://vignette.wikia.nocookie.net/simpsons/images/4/4f/StephenHawkingTSTO.png/revision/latest?cb=20170904013136')", title: "Moe's Bar"}
+  .border-2.border-black.lg.lg.lg.border-black.bg-yellow-light.rounded-b.lg.rounded-b-none.lg.rounded-r.p-4.flex.flex-col.justify-between.leading-normal
+    .mb-8
+      .text-black.font-bold.text-xl.mb-2 
+      %p.text-grey-darker.text-base 
+    .flex.items-center
+      %ul.list-reset.text-black.text-sm.mb-2
+        %p.text-3xl	Famous patrons who have soiled the integrity of this bar:
+        %li Aerosmith
+        %li Stephen Hawking 
+        %li U2
+        %li Red Hot Chili Peppers
+        %li Jay Leno
+        %li Wade Boggs 
+        %li Johnny Carson
+        %li Joe Frazier
+        %li Jamie Farr
+        %li and R.E.M
+

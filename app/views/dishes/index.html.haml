@@ -1,18 +1,40 @@
-= render 'login_logout'
+= render 'navbar'
+.flex.justify-center.mt-8.mr-8.ml-8	
+    .max-w-lg.rounded.overflow-hidden.shadow-lg.mr-8.bg-yellow-lighter.mb-8.border-solid.border-black.border-2
+        %a(href="https://www.linkedin.com/company/springfield-nuclear-power-plant/" target="_blank")
+            = image_tag 'moes_electricity.png',{class: 'main' }
+        .px-10.py-4
+        %p.text-center.font-bold.text-l.mb-2 Now with electricity!
+        %p.text-center.text-grey-darker.text-base.pb-4 If you're into that sorta thing
+    .max-w-lg.rounded.overflow-hidden.shadow-lg.mr-8.bg-yellow-lighter.mb-8.border-solid.border-black.border-2
+        = image_tag 'bartender.jpg', {class: 'main' }
+        .px-10.py-4
+        %p.text-center.font-bold.text-l.mb-2 Our beloved bartender...
+        %p.text-center.text-grey-darker.text-base.pb-4  Moe
+    .max-w-lg.rounded.overflow-hidden.shadow-lg.bg-yellow-lighter.mb-8.border-solid.border-black.border-2
+        = image_tag 'customers.jpg', {class: 'main' }
+        .px-10.py-4
+        %p.text-center.font-bold.text-l.mb-2 Meet the locals! 
+        %p.text-center.text-grey-darker.text-base.pb-4  We now love tourists!
 
 - @categories.each do |category|
-    %p= category.name
-    %div{id: dom_id(category)}
+    %h1.text-center.border-solid.border-black.border-2.bg-yellow-lighter.h-10p.flex.justify-center.items-center= category.name
+    %div.flex.justify-center.flex-wrap{id: dom_id(category)}
         - category.dishes.each do |dish|
-            %div{id: dom_id(dish)} 
-                %p= "Name: #{dish.name}"
-                %p= "Description: #{dish.description}"
-                %p= "Price: #{dish.price} SEK"
+            .dishcards.flex-col.m-5.border-solid.border-black.border-2.bg-yellow-lighter.p-4.rounded-lg.text-center.w-30p{id: dom_id(dish)}
+                %h2.p-2.border-b.border-black= dish.name
+                %p.p-2.font-hairline.tracking-wide= dish.description
+                %h3.p-2= "#{dish.price} SEK"
                 = add_to_cart(dish, 1, "Add to cart")
-                - if user_signed_in?
+                - if user_signed_in? 
                     - if current_user.restaurant_owner?
                         %p= link_to 'Update Dish', edit_dish_path(dish)
                         %p= link_to 'Delete Dish', dish_path(dish), method: :delete
 = shop_icon_quantity 
 = link_to "Checkout", cartify.cart_path
 
+                        .text-center
+                            %p.p-2= link_to 'Update Dish', edit_dish_path(dish)
+                            %p.p-2= link_to 'Delete Dish', dish_path(dish), method: :delete
+
+= image_tag 'homer_donut.png', alt: 'Moes'

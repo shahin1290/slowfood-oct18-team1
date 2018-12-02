@@ -1,0 +1,17 @@
+= render 'navbar'
+.flex.justify-center
+  .border-solid.border-black.border-2.bg-yellow-lighter.w-64.text-center.h-full.m-4
+    %h2.p-4 Log in
+
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .field
+        = f.label :email
+        %br/
+        = f.email_field :email, autofocus: true, autocomplete: "email"
+      .field
+        = f.label :password
+        %br/
+        = f.password_field :password, autocomplete: "current-password"
+      .actions
+        = f.submit "Log in"
+    = notice || alert

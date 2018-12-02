@@ -12,7 +12,10 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'webpacker', '~> 3.5'
+gem 'tailwindcss', git: 'https://github.com/IcaliaLabs/tailwindcss-rails.git'
 gem 'cartify', github: 'CraftAcademy/cartify', branch: 'rails_5_2'
+gem 'faker'
 
 group :development, :test do
   gem 'coveralls', require: false 

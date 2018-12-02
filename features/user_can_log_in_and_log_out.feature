@@ -8,7 +8,7 @@ Feature: User can log in and out
         | name | address      | phone   | email          | password | password_confirmation |
         | Greg | 123 drive st.| 7654321 | real@email.com | password | password              |
         And I visit the page
-        And I click 'Log in'
+        And I click 'Login'
 
     Scenario: If user fills in the login form correctly he can log in
         When I fill in 'Email' field with 'real@email.com'
