@@ -1,13 +1,13 @@
-.bg-yellow-light.h-25p.flex
+.bg-yellow-light.h-25p.flex.border-2.border-black
     .w-33p
         =link_to image_tag('moes_logo_smaller.png',{class: 'logo' }), root_path 
     .w-33p
         %h1.text-4xl.text-center Moe's Tavern
         %h4.text-center Springfield, U.S.A.
         .flex.justify-between
-            =link_to image_tag('main.png',{class: 'logolink' }), 'dishes.html#category_4' 
-            =link_to image_tag('starter_fish.png',{class: 'logolink' }), 'dishes.html#category_5'
-            =link_to image_tag('donut.png',{class: 'logolink' }), 'dishes.html#category_6'
+            =link_to image_tag('main.png',{class: 'logolink' }), 'dishes.html#category_1' 
+            =link_to image_tag('starter_fish.png',{class: 'logolink' }), 'dishes.html#category_2'
+            =link_to image_tag('donut.png',{class: 'logolink' }), 'dishes.html#category_3'
     - if user_signed_in?
         .flex.w-33p
             - if current_user.restaurant_owner?

@@ -42,6 +42,10 @@ body{
 .main{
     width: 100%;
     height: auto;
+    transition: 0.2s;
+}
+.main:hover{
+    border: 5px solid black;
 }
 
 .image1{
