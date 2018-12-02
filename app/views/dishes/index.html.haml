@@ -1,7 +1,8 @@
 = render 'navbar'
 .flex.justify-center.mt-8.mr-8.ml-8	
     .max-w-lg.rounded.overflow-hidden.shadow-lg.mr-8.bg-yellow-lighter.mb-8.border-solid.border-black.border-2
-        = image_tag 'moes_electricity.png',{class: 'main' }
+        %a(href="https://www.linkedin.com/company/springfield-nuclear-power-plant/" target="_blank")
+            = image_tag 'moes_electricity.png',{class: 'main' }
         .px-10.py-4
         %p.text-center.font-bold.text-l.mb-2 Now with electricity!
         %p.text-center.text-grey-darker.text-base.pb-4 If you're into that sorta thing

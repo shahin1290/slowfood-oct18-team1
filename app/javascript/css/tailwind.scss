@@ -16,12 +16,14 @@ body{
 }
 
 .field input{
-    padding-top: 12px;
-    height: 1.2rem;
-    border-radius: 10px
+    height: 1.5rem;
+    border-radius: 10px;
+    width: 75%;
+    text-align: center;
 }
 
 .actions{
+    text-align: center;
     padding: 1rem;
 }
 
@@ -32,8 +34,6 @@ body{
 .logo{
     height: 6rem;
 }
-
-
 
 .main{
     width: 100%;

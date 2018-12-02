@@ -1,0 +1,20 @@
+%main.container.general-main-wrap.border-solid.border-black.border-2.bg-yellow-lighter.p-4.rounded-lg.m-5.w-50p
+  %h1.general-title-margin= t('cart.cart')
+
+  .hidden-xs.p-2
+    %table.table.table-hover
+      %thead
+        %tr
+          %th.col-pic.pl-0
+            %span.in-grey-600= t('cart.product')
+          %th.col-price
+            %span.in-grey-600= t('cart.price')
+          %th.col-quantity
+            %span.in-grey-600= t('cart.quantity')
+          %th.col-total
+            %span.in-grey-600= t('cart.subtotal')
+          %th.col-close
+      = render 'cartify/carts/order_items', locals: @order_items
+  = render 'cartify/carts/order_summary'
+  .text-center
+    = link_to t('cart.checkout'), checkout_index_path, class: 'btn btn-default mb-20'
