@@ -18,9 +18,9 @@
                         %p.pr-8.pb-4= link_to 'Log out', destroy_user_session_path, method: :delete
                     = notice || alert
             - else
-                .flex-col.items-start
+                .flex.flex-col.text-right.w-full
                     %p= "Hello, #{current_user.name}"
-                    %p.pr-4= link_to 'Log out', destroy_user_session_path, method: :delete
+                    %p= link_to 'Log out', destroy_user_session_path, method: :delete
                     = shop_icon_quantity 
                     = link_to "Proceed to checkout", cartify.cart_path
                     = notice || alert
