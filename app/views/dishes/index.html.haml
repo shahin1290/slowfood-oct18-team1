@@ -1,4 +1,4 @@
-= render 'navbar'
+= render 'partials/navbar'
 .flex.justify-center.mt-8.mr-8.ml-8	
     .max-w-lg.rounded.overflow-hidden.shadow-lg.mr-8.bg-yellow-lighter.mb-8.border-solid.border-black.border-2
         %a(href="https://www.linkedin.com/company/springfield-nuclear-power-plant/" target="_blank")
@@ -7,18 +7,18 @@
         %p.text-center.font-bold.text-l.mb-2 Now with electricity!
         %p.text-center.text-grey-darker.text-base.pb-4 If you're into that sorta thing
     .max-w-lg.rounded.overflow-hidden.shadow-lg.mr-8.bg-yellow-lighter.mb-8.border-solid.border-black.border-2
-        = image_tag 'bartender.jpg', {class: 'main' }
+        =link_to image_tag('bartender.jpg', {class: 'main' }), 'moesbio.html'
         .px-10.py-4
         %p.text-center.font-bold.text-l.mb-2 Our beloved bartender...
         %p.text-center.text-grey-darker.text-base.pb-4  Moe
     .max-w-lg.rounded.overflow-hidden.shadow-lg.bg-yellow-lighter.mb-8.border-solid.border-black.border-2
-        = image_tag 'customers.jpg', {class: 'main' }
+        =link_to image_tag('customers.jpg', {class: 'main' }), 'restaurant.html'
         .px-10.py-4
         %p.text-center.font-bold.text-l.mb-2 Meet the locals! 
         %p.text-center.text-grey-darker.text-base.pb-4  We now love tourists!
 
 - @categories.each do |category|
-    %h1.text-center.border-solid.border-black.border-2.bg-yellow-lighter.h-10p.flex.justify-center.items-center= category.name
+    %h1.text-center.border-solid.border-black.border-2.bg-yellow-lighter.h-10p.flex.justify-center.items-center.text-4xl= category.name
     %div.flex.justify-center.flex-wrap{id: dom_id(category)}
         - category.dishes.each do |dish|
             .dishcards.flex-col.m-5.border-solid.border-black.border-2.bg-yellow-lighter.p-4.rounded-lg.text-center.w-30p{id: dom_id(dish)}

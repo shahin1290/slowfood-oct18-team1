@@ -1,0 +1,14 @@
+= render 'partials/navbar'
+.flex.justify-center.mb-0
+  = image_tag 'moesbio.gif', alt: 'Moes'
+.flex.justify-center.pr-32.pl-32.pt-0
+  .h-48.lg.h-48.lg.w-38.flex-none.bg-cover.rounded-t.lg.rounded-t-none.lg.rounded-l.text-center.overflow-hidden
+  .border-2.border-black.lg.lg.lg.border-black.bg-yellow-light.rounded-b.lg.rounded-b-none.lg.rounded-r.p-4.flex.flex-col.justify-between.leading-normal
+    .mb-0
+      .text-black.font-bold.text-xl.mb-2 
+      %p.text-grey-darker.text-base 
+    .flex.items-center
+      %img.w-13.h-auto.rounded-full.mr-4{alt: "Moe", src: "https://vignette.wikia.nocookie.net/simpsons/images/f/f6/Little_Moe.png/revision/latest?cb=20160406032245"}/
+      .text-lg
+        %p.flex.justify-center.text-3xl= "Meet #{@contactinfo['meetmoe']}"
+        %p= @contactinfo['moesbio']
