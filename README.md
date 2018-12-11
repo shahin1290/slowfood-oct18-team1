@@ -17,4 +17,4 @@ The main objective for this challenge is to practice the workflow that we want t
 - GitHub to store your code and make it available for the entire team
 - Pivotal Tracker as Project Management tool for tracking Features, Chores, and Bugs.
 ## Deployment
-[Link to the site](https://moestavern.herokuapp.com/)
+[Link to the site](https://slow-food-moes-toven.herokuapp.com/)
