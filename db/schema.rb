@@ -90,10 +90,21 @@ ActiveRecord::Schema.define(version: 2018_11_28_192230) do
     t.string "name"
     t.text "description"
     t.integer "price"
+    t.string "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "category_id"
     t.index ["category_id"], name: "index_dishes_on_category_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.float "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "category_id"
+    t.index ["category_id"], name: "index_products_on_category_id"
   end
 
   create_table "users", force: :cascade do |t|

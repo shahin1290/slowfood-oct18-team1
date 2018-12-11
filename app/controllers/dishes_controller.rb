@@ -53,3 +53,4 @@ class DishesController < ApplicationController
       Category.find_by(id: params[:dish][:category_id])
     end
 end
+     
